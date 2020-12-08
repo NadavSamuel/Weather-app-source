@@ -1,0 +1,14 @@
+.main-app-container{
+    font-size: 18px;
+    padding-bottom: 15px;
+    @include absolute-center;
+    .top{
+        .search{
+        margin-top:60px
+        }
+    }
+}
+        .error-msg{
+            text-align: center;
+            @include msg;
+        }

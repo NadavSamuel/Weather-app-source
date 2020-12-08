@@ -1,0 +1,30 @@
+.search {
+    position: relative;
+    .background-glass {
+        background-image: url(../../imgs/glass.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 70px;
+    }
+    input {
+        width: 230px;
+        height: 55px;
+        border-radius: 42px;
+        padding-inline-start: 32px;
+        font-size: 1.3rem;
+        background: #ffffff6e;
+
+        &:focus {
+            outline: none;
+            background-image: none;
+        }
+    }
+    span {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        &input:focus {
+            display: none;
+        }
+    }
+}

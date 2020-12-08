@@ -1,0 +1,53 @@
+.favorites-page {
+    text-align: center;
+    overflow-x: hidden;
+    padding-bottom: $padding-bottom;
+    @include absolute-center;
+    .no-favorites {
+        margin-top: 60px;
+    }
+    .favorites-nav {
+        align-self: center;
+        @include msg;
+
+        &.long {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(30px, 1fr));
+            gap: 20px;
+        }
+        &.short {
+            display: flex;
+            justify-content: space-around;
+        }
+        a {
+            font-size: 1.7rem;
+            text-decoration: none;
+            color: inherit;
+            &:after {
+                content: " ";
+            }
+        }
+    }
+}
+@media (max-width: 810px) {
+    .favorites-page {
+        .favorites-nav {
+            gap: 30px;
+            a {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+@media (max-width: 420px) {
+    .favorites-page {
+        .favorites-nav {
+            a {
+                font-size: 1.1rem;
+            }
+            &.long {
+                gap: 5px;
+            }
+        }
+    }
+}
